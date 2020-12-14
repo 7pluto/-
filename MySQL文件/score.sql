@@ -1,0 +1,130 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : 127.0.0.1
+Source Server Version : 50715
+Source Host           : 127.0.0.1:3306
+Source Database       : studentmanage
+
+Target Server Type    : MYSQL
+Target Server Version : 50715
+File Encoding         : 65001
+
+Date: 2020-11-08 22:33:41
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for score
+-- ----------------------------
+DROP TABLE IF EXISTS `score`;
+CREATE TABLE `score` (
+  `number` varchar(20) COLLATE utf8_bin NOT NULL,
+  `course` int(6) NOT NULL,
+  `score` double(10,1) NOT NULL,
+  PRIMARY KEY (`number`,`course`),
+  KEY `course_score` (`course`),
+  CONSTRAINT `course_score` FOREIGN KEY (`course`) REFERENCES `course` (`id`),
+  CONSTRAINT `student_score` FOREIGN KEY (`number`) REFERENCES `student` (`number`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of score
+-- ----------------------------
+INSERT INTO `score` VALUES ('3118000800', '1', '69.5');
+INSERT INTO `score` VALUES ('3118000800', '2', '88.0');
+INSERT INTO `score` VALUES ('3118000800', '3', '90.0');
+INSERT INTO `score` VALUES ('3118000800', '4', '76.0');
+INSERT INTO `score` VALUES ('3118000800', '5', '77.0');
+INSERT INTO `score` VALUES ('3118000800', '6', '83.5');
+INSERT INTO `score` VALUES ('3118000800', '7', '88.0');
+INSERT INTO `score` VALUES ('3118000800', '8', '68.0');
+INSERT INTO `score` VALUES ('3118000800', '9', '87.0');
+INSERT INTO `score` VALUES ('3118000800', '10', '79.0');
+INSERT INTO `score` VALUES ('3118000800', '11', '80.0');
+INSERT INTO `score` VALUES ('3118000800', '12', '86.0');
+INSERT INTO `score` VALUES ('3118000800', '13', '52.0');
+INSERT INTO `score` VALUES ('3118000800', '14', '74.0');
+INSERT INTO `score` VALUES ('3118000800', '15', '75.0');
+INSERT INTO `score` VALUES ('3118000800', '16', '87.0');
+INSERT INTO `score` VALUES ('3118000801', '1', '90.0');
+INSERT INTO `score` VALUES ('3118000801', '2', '87.0');
+INSERT INTO `score` VALUES ('3118000801', '3', '83.0');
+INSERT INTO `score` VALUES ('3118000801', '4', '89.0');
+INSERT INTO `score` VALUES ('3118000801', '5', '80.5');
+INSERT INTO `score` VALUES ('3118000801', '6', '79.0');
+INSERT INTO `score` VALUES ('3118000801', '7', '80.0');
+INSERT INTO `score` VALUES ('3118000801', '8', '72.0');
+INSERT INTO `score` VALUES ('3118000801', '9', '68.0');
+INSERT INTO `score` VALUES ('3118000801', '10', '76.0');
+INSERT INTO `score` VALUES ('3118000801', '11', '92.0');
+INSERT INTO `score` VALUES ('3118000801', '12', '87.5');
+INSERT INTO `score` VALUES ('3118000801', '13', '86.5');
+INSERT INTO `score` VALUES ('3118000801', '14', '68.0');
+INSERT INTO `score` VALUES ('3118000801', '15', '90.0');
+INSERT INTO `score` VALUES ('3118000801', '16', '85.0');
+INSERT INTO `score` VALUES ('3118000802', '1', '54.0');
+INSERT INTO `score` VALUES ('3118000802', '2', '76.0');
+INSERT INTO `score` VALUES ('3118000802', '3', '85.0');
+INSERT INTO `score` VALUES ('3118000802', '4', '60.5');
+INSERT INTO `score` VALUES ('3118000802', '5', '89.0');
+INSERT INTO `score` VALUES ('3118000802', '6', '87.0');
+INSERT INTO `score` VALUES ('3118000802', '7', '66.0');
+INSERT INTO `score` VALUES ('3118000802', '8', '60.0');
+INSERT INTO `score` VALUES ('3118000802', '9', '74.0');
+INSERT INTO `score` VALUES ('3118000802', '10', '88.0');
+INSERT INTO `score` VALUES ('3118000802', '11', '86.0');
+INSERT INTO `score` VALUES ('3118000802', '12', '73.0');
+INSERT INTO `score` VALUES ('3118000802', '13', '76.0');
+INSERT INTO `score` VALUES ('3118000802', '14', '45.0');
+INSERT INTO `score` VALUES ('3118000802', '15', '67.0');
+INSERT INTO `score` VALUES ('3118000802', '16', '88.0');
+INSERT INTO `score` VALUES ('3118000803', '1', '83.0');
+INSERT INTO `score` VALUES ('3118000803', '2', '84.0');
+INSERT INTO `score` VALUES ('3118000803', '3', '78.0');
+INSERT INTO `score` VALUES ('3118000803', '4', '65.0');
+INSERT INTO `score` VALUES ('3118000803', '5', '65.0');
+INSERT INTO `score` VALUES ('3118000803', '6', '57.0');
+INSERT INTO `score` VALUES ('3118000803', '7', '90.0');
+INSERT INTO `score` VALUES ('3118000803', '8', '76.0');
+INSERT INTO `score` VALUES ('3118000803', '9', '65.0');
+INSERT INTO `score` VALUES ('3118000803', '10', '78.0');
+INSERT INTO `score` VALUES ('3118000803', '11', '88.0');
+INSERT INTO `score` VALUES ('3118000803', '12', '76.0');
+INSERT INTO `score` VALUES ('3118000803', '13', '84.0');
+INSERT INTO `score` VALUES ('3118000803', '14', '66.0');
+INSERT INTO `score` VALUES ('3118000803', '15', '67.5');
+INSERT INTO `score` VALUES ('3118000803', '16', '96.0');
+INSERT INTO `score` VALUES ('3118000804', '1', '87.0');
+INSERT INTO `score` VALUES ('3118000804', '2', '58.5');
+INSERT INTO `score` VALUES ('3118000804', '3', '86.0');
+INSERT INTO `score` VALUES ('3118000804', '4', '67.0');
+INSERT INTO `score` VALUES ('3118000804', '5', '68.0');
+INSERT INTO `score` VALUES ('3118000804', '6', '65.0');
+INSERT INTO `score` VALUES ('3118000804', '7', '80.0');
+INSERT INTO `score` VALUES ('3118000804', '8', '63.0');
+INSERT INTO `score` VALUES ('3118000804', '9', '69.5');
+INSERT INTO `score` VALUES ('3118000804', '10', '61.0');
+INSERT INTO `score` VALUES ('3118000804', '11', '75.0');
+INSERT INTO `score` VALUES ('3118000804', '12', '70.0');
+INSERT INTO `score` VALUES ('3118000804', '13', '68.0');
+INSERT INTO `score` VALUES ('3118000804', '14', '48.0');
+INSERT INTO `score` VALUES ('3118000804', '15', '77.0');
+INSERT INTO `score` VALUES ('3118000804', '16', '88.0');
+INSERT INTO `score` VALUES ('3118000805', '1', '76.0');
+INSERT INTO `score` VALUES ('3118000805', '2', '92.5');
+INSERT INTO `score` VALUES ('3118000805', '3', '78.0');
+INSERT INTO `score` VALUES ('3118000805', '4', '80.0');
+INSERT INTO `score` VALUES ('3118000805', '5', '65.0');
+INSERT INTO `score` VALUES ('3118000805', '6', '59.0');
+INSERT INTO `score` VALUES ('3118000805', '7', '70.5');
+INSERT INTO `score` VALUES ('3118000805', '8', '64.0');
+INSERT INTO `score` VALUES ('3118000805', '9', '68.0');
+INSERT INTO `score` VALUES ('3118000805', '10', '72.0');
+INSERT INTO `score` VALUES ('3118000805', '11', '76.0');
+INSERT INTO `score` VALUES ('3118000805', '12', '68.0');
+INSERT INTO `score` VALUES ('3118000805', '13', '70.0');
+INSERT INTO `score` VALUES ('3118000805', '14', '49.0');
+INSERT INTO `score` VALUES ('3118000805', '15', '77.0');
+INSERT INTO `score` VALUES ('3118000805', '16', '89.0');
